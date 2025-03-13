@@ -1,4 +1,5 @@
-function init(modules: { typescript: typeof import("typescript/lib/tsserverlibrary") }) {
+import * as ts from "typescript/lib/tsserverlibrary";
+function init(modules: { typescript: typeof ts }) {
     const ts = modules.typescript;
   
     function create(info: ts.server.PluginCreateInfo) {
